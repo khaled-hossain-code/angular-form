@@ -1,9 +1,9 @@
 (function () {
     "use strict";
     angular.module('angularFormsApp')
-        .controller('efController', ['$scope', 'DataService','$window','$routeParams', efController]);
+        .controller('efController', ['$scope', 'DataService','$window','$routeParams','$modalInstance', efController]);
 
-    function efController($scope, DataService, $window, $routeParams) {
+    function efController($scope, DataService, $window, $routeParams, $modalInstance) {
         
         if($routeParams.id){
             $scope.employee = DataService.getEmployee($routeParams.id);    
@@ -28,13 +28,15 @@
                 //update employee data
                 DataService.updateEmployee($scope.editableEmployee);
             }
-            
+
             $scope.employee = angular.copy($scope.editableEmployee);
-            $window.history.back();
+            //$window.history.back();
+            $modalInstance.close();
         }
         $scope.cancelForm = function (){
              $scope.editableEmployee = angular.copy($scope.employee);
-             $window.history.back();
+             //$window.history.back();
+             $modalInstance.dismiss();
         }
     }
 })();

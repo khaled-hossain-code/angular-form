@@ -1,12 +1,16 @@
 (function(){
     "use strict";
     angular.module('angularFormsApp')
-           .controller('HomeController',['$scope','$location','DataService',homeController]);
+           .controller('HomeController',['$scope','$location','$modal','DataService',homeController]);
 
-    function homeController($scope, $location, DataService){
+    function homeController($scope, $location,$modal, DataService){
         
         $scope.showCreateEmployeeForm = function(){
-            $location.path('/newEmployeeForm');
+            //$location.path('/newEmployeeForm');
+            $modal.open({
+                templateUrl: 'app/EmployeeForm/efTemplate.html',
+                controller: 'efController'
+            })
         }
 
         $scope.updateEmployeeForm = function(id){

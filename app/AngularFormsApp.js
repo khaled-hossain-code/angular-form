@@ -1,6 +1,6 @@
 (function(){
     "use strict";
-    var angularFormsApp = angular.module('angularFormsApp',["ngRoute"]);
+    var angularFormsApp = angular.module('angularFormsApp',["ngRoute","ui.bootstrap"]);
 
     angularFormsApp.config(['$routeProvider', function($routeProvider){
         $routeProvider

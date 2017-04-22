@@ -4,6 +4,16 @@
         .factory('DataService', [DataService]);
 
     function DataService() {
+        var employee1 = {
+                    id: 123,
+                    fullName: "Rashed",
+                    notes: "The ideal employee. Just don't touch his pen",
+                    department: "Administration",
+                    perkCar: true,
+                    perkStock: false,
+                    perkSixWeeks: true,
+                    payrollType: "none"
+                };
         return {
             insertEmployee: insertEmployee,
             updateEmployee: updateEmployee,
@@ -15,21 +25,12 @@
         }
 
         function updateEmployee(employee) {
-            return true;
+            return employee1 = employee;
         }
 
         function getEmployee(id) {
             if (id == '123') {
-                return {
-                    fullName: "Rashed",
-                    notes: "The ideal employee. Just don't touch his pen",
-                    department: "Administration",
-                    perkCar: true,
-                    perkStock: false,
-                    perkSixWeeks: true,
-                    payrollType: "none"
-
-                }
+                return employee1;
             }else{
                 return undefined;
             }
