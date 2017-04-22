@@ -1,6 +1,19 @@
 (function(){
     "use strict";
-    var angularFormsApp = angular.module('angularFormsApp',[]);
+    var angularFormsApp = angular.module('angularFormsApp',["ngRoute"]);
 
-    
+    angularFormsApp.config(['$routeProvider', function($routeProvider){
+        $routeProvider
+            .when('/home',{
+                templateUrl: 'app/home.html',
+                controller: 'HomeController'
+            })
+            .when('/newEmployeeForm',{
+                templateUrl: 'app/EmployeeForm/efTemplate.html',
+                controller: 'efController'
+            })
+            .otherwise({
+                redirectTo: '/home'
+            })
+    }])
 })();

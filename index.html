@@ -7,16 +7,15 @@
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <title>AngularFormApp</title>
 </head>
-<body ng-controller="efController" class="container">
-
-    <employee-form/>
-
-
+<body>
+    <div ng-view></div>
 
     <script src="./node_modules/angular/angular.min.js"></script>
+    <script src="./node_modules/angular-route/angular-route.min.js"></script>
     <script src="./app/AngularFormsApp.js"></script>
     <script src="./app/EmployeeForm/efDirective.js"></script>
     <script src="./app/EmployeeForm/efController.js"></script>
     <script src="./app/EmployeeForm/efService.js"></script>
+    <script src="./app/homeController.js"></script>
 </body>
 </html>
