@@ -12,6 +12,10 @@
                 templateUrl: 'app/EmployeeForm/efTemplate.html',
                 controller: 'efController'
             })
+            .when('/updateEmployeeForm/:id',{
+                templateUrl: 'app/EmployeeForm/efTemplate.html',
+                controller: 'efController'
+            })
             .otherwise({
                 redirectTo: '/home'
             })
