@@ -6,11 +6,11 @@
     function homeController($scope, $location,$modal, DataService){
         
         $scope.showCreateEmployeeForm = function(){
-            //$location.path('/newEmployeeForm');
-            $modal.open({
-                templateUrl: 'app/EmployeeForm/efTemplate.html',
-                controller: 'efController'
-            })
+            $location.path('/newEmployeeForm');
+            // $modal.open({
+            //     templateUrl: 'app/EmployeeForm/efTemplate.html',
+            //     controller: 'efController'
+            // })
         }
 
         $scope.updateEmployeeForm = function(id){

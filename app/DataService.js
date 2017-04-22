@@ -9,6 +9,7 @@
                     fullName: "Rashed",
                     notes: "The ideal employee. Just don't touch his pen",
                     department: "Administration",
+                    dateHired: "01/05/17",//5th january 2017
                     perkCar: true,
                     perkStock: false,
                     perkSixWeeks: true,
